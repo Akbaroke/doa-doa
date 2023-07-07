@@ -14,10 +14,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'UTS MOBILE',
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: const MaterialColor(
+          0xFF00957B,
+          <int, Color>{
+            50: Color(0xFFE6F5F2),
+            100: Color(0xFFB3DDD0),
+            200: Color(0xFF80C6AD),
+            300: Color(0xFF4DAD8A),
+            400: Color(0xFF269671),
+            500: Color(0xFF00957B),
+            600: Color(0xFF008A71),
+            700: Color(0xFF007E66),
+            800: Color(0xFF00735C),
+            900: Color(0xFF006549),
+          },
+        ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Doa-Doa'),
+      home: const MyHomePage(title: 'IndoQur`an'),
     );
   }
 }
@@ -53,7 +67,22 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/images/logo.png',
+              width: 30,
+              height: 30,
+            ),
+            const SizedBox(width: 10),
+            Text(widget.title,
+                style: const TextStyle(
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic,
+                    fontSize: 22)),
+          ],
+        ),
       ),
       body: FutureBuilder<List<Doa>>(
         future: _doaList,
@@ -65,37 +94,68 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (context, index) {
                 final doa = doaList[index];
                 return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: ListTile(
-                    title: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Text(doa.doa,
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold)),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              doa.ayat,
-                              style: const TextStyle(
-                                  fontStyle: FontStyle.italic, fontSize: 20),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 1.0, horizontal: 7.0),
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    elevation: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text('${doa.id}. ',
+                                  style: const TextStyle(
+                                      fontFamily: 'Quicksand',
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xFF00957B),
+                                      fontSize: 15)),
+                              Text(doa.doa,
+                                  style: const TextStyle(
+                                      fontFamily: 'Quicksand',
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15))
+                            ],
+                          ),
+                          const SizedBox(height: 15),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 4.0),
+                            child: Align(
+                              alignment: Alignment.topRight,
+                              child: Text(
+                                doa.ayat,
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Scheherazade',
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Text(doa.latin),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 4.0),
-                          child: Text(doa.artinya),
-                        ),
-                      ],
+                          const SizedBox(height: 15),
+                          Text(
+                            doa.latin,
+                            style: const TextStyle(
+                                fontStyle: FontStyle.italic,
+                                fontSize: 14,
+                                fontFamily: 'Quicksand',
+                                color: Color(0xFF00957B)),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            doa.artinya,
+                            style: const TextStyle(
+                              fontStyle: FontStyle.normal,
+                              fontSize: 14,
+                              fontFamily: 'Quicksand',
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
