@@ -18,7 +18,7 @@
 <br>
 
 ## API URL
-```http
+```py
   GET  https://doa-doa-api-ahmadramadhan.fly.dev/api
 ```
 
@@ -29,4 +29,3 @@
   <img src="./screnshoot/HomePage.jpg"/>
 </div>
 
-<br>
