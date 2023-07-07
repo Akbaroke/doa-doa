@@ -1,16 +1,32 @@
-# uas_mobile
+# UAS PEMPROGRAMAN MOBILE 2
+**Nama : Muhammad Akbar**<br>
+**Nim : 312110483**<br>
+**Kelas : TI.21.A3**
 
-A new Flutter project.
+<br>
 
-## Getting Started
+## Tech Stack
+- Flutter
+- Dart
 
-This project is a starting point for a Flutter application.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+## Features
+- Menampilkan daftar doa-doa harian
+- Doa text arab, latin dan arti dalam bahasa indonesia
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API URL
+```http
+  GET  https://doa-doa-api-ahmadramadhan.fly.dev/api
+```
+
+<br>
+
+## Screenshot Aplikasi
+<div align='center'>
+  <img src="./screnshoot/HomePage.jpg"/>
+</div>
+
+<br>
