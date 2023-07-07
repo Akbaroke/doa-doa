@@ -17,15 +17,15 @@
 
 <br>
 
-## API URL
+## API Reference
 ```py
   GET  https://doa-doa-api-ahmadramadhan.fly.dev/api
 ```
 
 <br>
 
-## Screenshot Aplikasi
+## Demo
 <div align='center'>
-  <img src="./screnshoot/HomePage.jpg"/>
+  <img src="./screenshot/demo.gif" width="300"/>
 </div>
 
