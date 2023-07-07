@@ -1,7 +1,7 @@
 # UAS PEMPROGRAMAN MOBILE 2
-**Nama : Muhammad Akbar**<br>
-**Nim : 312110483**<br>
-**Kelas : TI.21.A3**
+***Nama : Muhammad Akbar***<br>
+***Nim : 312110483***<br>
+***Kelas : TI.21.A3***
 
 <br>
 
